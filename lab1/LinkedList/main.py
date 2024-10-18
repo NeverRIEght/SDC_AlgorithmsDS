@@ -3,19 +3,27 @@ from LinkedList import LinkedList
 
 # First exercise: Implement the LinkedList class
 # Second exercise: Implement removeAllByValue method
-first = LinkedListNode(1)
-second = LinkedListNode(2)
-third = LinkedListNode(3)
+one = LinkedListNode(1)
+two = LinkedListNode(2)
+three = LinkedListNode(3)
+four = LinkedListNode(4)
+five = LinkedListNode(5)
 
-ll = LinkedList(first)
-ll.append(second)
-ll.append(third)
-ll.append(third)
-ll.append(second)
-ll.append(first)
+ll = LinkedList(one)
+ll.append(two)
+ll.append(three)
+ll.append(four)
+ll.append(five)
+ll.append(two)
+ll.append(four)
+ll.append(five)
 
 print(ll)
 
-ll.removeAllByValue(3)
+ll.removeAllByValue(1)
 
 print(ll)
+
+reversedLL = ll.reverse()
+
+print(reversedLL)

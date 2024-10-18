@@ -93,6 +93,25 @@ class LinkedList:
             previousElement = currentElement
             currentElement = currentElement.nextElement
 
+    def reverse(self):
+        if self.firstElement is None:
+            print("Error: can not reverse the empty LinkedList")
+            return
+
+        currentElement = self.firstElement
+        previousElement = None
+        nextElement = None
+        while currentElement is not None:
+            nextElement = currentElement.nextElement
+            currentElement.nextElement = previousElement
+            previousElement = currentElement
+            currentElement = nextElement
+
+        self.firstElement = previousElement
+
+        print("Successfully reversed LinkedList")
+        return self
+
     def __str__(self):
         output: str = "LinkedList:\n"
 
