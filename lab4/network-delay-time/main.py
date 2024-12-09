@@ -3,6 +3,7 @@ from collections import defaultdict
 from typing import List
 
 # Double cycle
+# O(n * e), where n = number of nodes, e = number of edges
 
 # class Solution:
 #     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
@@ -46,6 +47,7 @@ from typing import List
 #         return max(distances)
 
 # Priority Queue
+# O(n * log(n)), where n = number of nodes
 
 class Solution:
     def networkDelayTime(self, times: List[List[int]], n: int, k: int) -> int:
