@@ -13,7 +13,7 @@ class Solution:
         # Deque-based BFS (startGene, mutations counter)
         queue = deque([(startGene, 0)])
 
-        visited = set([startGene])
+        visited = {startGene}
 
         while queue:
             current_gene, mutations = queue.popleft()
@@ -22,7 +22,7 @@ class Solution:
             if current_gene == endGene:
                 return mutations
 
-            # Генерируем все возможные мутации
+            # Generate all possible combinations
             for i in range(len(current_gene)):
                 for current_symbol in gene_symbols:
                     # Do not override the same symbol
