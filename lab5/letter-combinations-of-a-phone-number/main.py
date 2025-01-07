@@ -1,5 +1,9 @@
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
+        # O(k^n),
+        # k - maximum number of characters per digit
+        # n - the number of digits in the input string
+        # So, the time complexity is somewhere between O(3^n) and O(4^n) in this case
         if digits is None or len(digits) == 0:
             return []
 
