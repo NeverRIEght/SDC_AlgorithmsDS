@@ -3,12 +3,12 @@ class Solution:
         # DFS, since we are searching for a destination (cycle)
         # O(n * m),
         # n = number of courses
-        # m = number of prerequisites for each course
+        # m = total number of prerequisites
 
         # HashMap: course -> list of its prerequisites
         graph = defaultdict(list)
-        for course, prereq in prerequisites:
-            graph[course].append(prereq)
+        for course, pre in prerequisites:
+            graph[course].append(pre)
 
         # Statuses for each node:
         # 0 = not visited
